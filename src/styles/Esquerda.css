@@ -1,0 +1,51 @@
+.esq {
+    display: flex;
+    max-width: 35%;
+    flex-direction: column;
+}
+
+h1{
+    color: #209869;
+}
+
+h1.quina{
+    color: #260085;
+}
+
+h1.facil {
+    color: #930089;
+}
+
+h2{
+    color: #209869;
+    margin-left: 66px;
+    margin-top: 0; 
+}
+
+h2.quina{
+    color: #260085;
+    margin-left: 66px;
+    margin-top: 0; 
+}
+
+h2.facil{
+    color: #930089;
+    margin-left: 66px;
+    margin-top: 0; 
+}
+
+.cabe {
+    display: flex;
+    flex-direction: row;
+}
+
+image {
+    padding: 15px;
+    padding-top: 20px;
+}
+
+p {
+    margin-left: 66px;
+    margin-top: 0;
+    color: #666;
+}

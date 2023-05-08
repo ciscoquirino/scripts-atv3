@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import { Contexto, Provider } from "./contexts/Contexto";
+import { AppRoutes } from "./routes/AppRoutes";
+import Load from "./components/Load";
+
 
 function App() {
+  const [carrega, setCarrega] = useState(true);
+
+  useEffect(() => {
+    if(Contexto.Provider !== null) {
+      setCarrega(false);
+    }
+  }, [])
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    { carrega === false ? (
+      <Provider>
+      <AppRoutes />
+      </Provider>
+    ) : (
+      <Load />
+    )}
+    </>
   );
 }
 
