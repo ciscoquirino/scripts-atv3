@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
-import "../styles/Menu.css";
+import styled from "styled-components";
 
-export function Menu() {
+
+function Menu() {
     return (
-        <div className="menu">
+        <WrapperSld>
             <NavLink 
-            to="/lotofacil"
+            to="/timemania"
             style={({ isActive }) => {
                 return {
-                color: isActive ? "#aaa" : "#930089",
+                color: isActive ? "#aaa" : "#00ff48",
                 textDecoration: "none",
                 pointerEvents: isActive ? "none" : "auto",
                 marginLeft: 15 };
@@ -32,6 +33,12 @@ export function Menu() {
                 marginLeft: 10 };
             }}
             >Quina </NavLink>
-        </div>
+        </WrapperSld>
     )
 }
+
+const WrapperSld = styled.div`
+    display: flex;
+`;
+
+export default Menu;

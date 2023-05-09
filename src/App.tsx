@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Contexto, Provider } from "./contexts/Contexto";
 import { AppRoutes } from "./routes/AppRoutes";
-import Load from "./components/Load";
+import Carregando from "./components/Carregando";
+
 
 
 function App() {
@@ -21,10 +22,13 @@ function App() {
       <AppRoutes />
       </Provider>
     ) : (
-      <Load />
+      <Carregando />
     )}
     </>
   );
 }
+
+
+
 
 export default App;
